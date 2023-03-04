@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="assets/js/p5/p5.min.js"></script>
+    <script src="assets/js/p5/p5.sound.min.js"></script>
+    <script src="assets/js/exercise2.js"></script>
+
+    <title>RICEDUST</title>
+</head>
+
+<body>
+    <div class="mx-auto px-4 py-4">
+
+        <!-- NAVBAR -->
+        <div class="navbar">
+            <div class="navbar-start"></div>
+            <div class="navbar-center space-x-4">
+                <a href="./" class="btn btn-ghost font-mono text-lg">&ltHOME&gt</a>
+                <a href="project1.html" class="btn btn-ghost font-mono text-lg">&ltPROJECT1&gt</a>
+                <a class="btn btn-ghost font-mono text-lg">&ltPROJECT2&gt</a>
+            </div>
+            <div class="navbar-end"></div>
+        </div>
+
+        <div class="hero pt-8">
+            <div class="hero-content">
+                <!-- ARTIST STATEMENT -->
+                <div>
+                    <div class="prose">
+                        <h1 class="font-mono text-center text-5xl">Exercise 2</h1>
+                        <h2 class="pt-4">Artist Statement</h2>
+                        <p>
+                            This is what I imagine it feels like to use Windows XP. You can spawn in windows and drag
+                            them around.
+                            It's not a very good simulation but it has Bonzi Buddy.
+                        </p>
+                        <h2>How It Works</h2>
+                        <p>
+                            I keep track of what images are drawn to the screen using an array.
+                            I keep another array to track what <strong>hasn't</strong> been drawn to the screen.
+                            When the spacebar is pressed, I pick an image that hasn't been drawn and put it in the array
+                            of images to draw to the screen.
+                            Pressing backspace removes images from the top of the array.
+
+                        </p>
+                        <p>
+                            To enable image trailing, I simply remove the background() function.
+                            To enable the RGB shifting, I use the noise() function to fluctuate between 0 and 255 for
+                            the red, green, and blue value.
+                        </p>
+                        <a href="assets/js/exercise2.js">SOURCE CODE</a>
+                        <h2>How to use</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Hotkey</th>
+                                    <th>Function</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Spacebar</td>
+                                    <td>Add a window</td>
+                                </tr>
+                                <tr>
+                                    <td>Backspace</td>
+                                    <td>Remove a window</td>
+                                </tr>
+                                <tr>
+                                    <td>T</td>
+                                    <td>Toggle image trailing</td>
+                                </tr>
+                                <tr>
+                                    <td>C</td>
+                                    <td>Toggle gamer mode</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SKETCH -->
+    <div id="canvas" class="m-0 pt-16 overflow-hidden"></div>
+</body>
+
+</html>

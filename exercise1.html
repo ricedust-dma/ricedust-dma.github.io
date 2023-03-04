@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="assets/js/p5/p5.min.js"></script>
+    <script src="assets/js/p5/p5.sound.min.js"></script>
+    <script src="assets/js/exercise1.js"></script>
+
+    <title>RICEDUST</title>
+</head>
+
+<body>
+    <div class="mx-auto px-4 py-4">
+
+        <!-- NAVBAR -->
+        <div class="navbar">
+            <div class="navbar-start"></div>
+            <div class="navbar-center space-x-4">
+                <a href="./" class="btn btn-ghost font-mono text-lg">&ltHOME&gt</a>
+                <a href="project1.html" class="btn btn-ghost font-mono text-lg">&ltPROJECT1&gt</a>
+                <a class="btn btn-ghost font-mono text-lg">&ltPROJECT2&gt</a>
+            </div>
+            <div class="navbar-end"></div>
+        </div>
+
+        <div class="hero pt-8">
+            <div class="hero-content">
+                <!-- ARTIST STATEMENT -->
+                <div>
+                    <div class="prose">
+                        <h1 class="font-mono text-center text-5xl">Exercise 1</h1>
+                        <h2 class="pt-4">Artist Statement</h2>
+                        <p>
+                            I tried using p5.js to do a 3D simulation.
+                            Recently, I've been interested in Perlin noise and I was pleasantly surprised that the p5.js
+                            API has a noise() function.
+                            I used it to make a bundle of cubes that responds to the mouse.
+                            You can hover over the cubes to unleash an EDM concert right in your browser.
+                        </p>
+                        <h2>How It Works</h2>
+                        <p>
+                            Using p5's WebGL canvas, I draw five cubes to the screen using a for loop.
+                            I rotate the cubes along the x and y axis each frame.
+                            I introduce noise to the rotation and size of each cube to add a bit of chaos.
+                            The intensity of the noise increases as the mouse moves further away from the center of the
+                            screen and decreases as the mouse moves closer.
+                            This basically has the effect of destabilizing the cubes as you move the mouse away.
+                        </p>
+                        <p>
+                            Hovering over the cubes opens up a hallway of shapes.
+                            The size of the shapes increases exponentially to create the illusion of zooming through
+                            a hallway.
+                            To draw each shape in even intervals, I divide the frame rate by the number of shapes and
+                            iterate over this interval.
+                            To further multiply the shapes, I nest a for loop to clone each shape.
+                            I use the random() function to achieve the glitchy flickering effect.
+                        </p>
+                        <a href="assets/js/exercise1.js">SOURCE CODE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SKETCH -->
+    <div id="canvas" class="m-0 pt-16 overflow-hidden"></div>
+</body>
+
+</html>
