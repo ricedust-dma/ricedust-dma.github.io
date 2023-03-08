@@ -16,109 +16,133 @@
 </head>
 
 <body>
-    <div class="mx-auto px-4 py-4">
-
+    <div class="mx-auto px-4 pt-4">
         <!-- NAVBAR -->
         <div class="navbar">
-            <div class="navbar-start"></div>
-            <div class="navbar-center space-x-4">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <label tabindex="0" class="btn btn-ghost sm:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </label>
+                    <ul tabindex="0" class="menu menu-compact dropdown-content bg-base-200 rounded-box w-52 p-2">
+                        <li><a href="./" class="btn btn-ghost font-mono text-base">&ltHOME&gt</a></li>
+                        <li><a href="project1.html" class="btn btn-ghost font-mono text-base">&ltPROJECT1&gt</a></li>
+                        <li><a class="btn btn-ghost font-mono text-base">&ltPROJECT2&gt</a></li>
+                        <li><a href="log.html" class="btn btn-ghost font-mono text-base">&ltLog&gt</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="./" class="btn btn-ghost font-extrabold text-xl sm:hidden">RICEDUST</a>
+            <div class="navbar-center hidden sm:flex gap-4">
                 <a href="./" class="btn btn-ghost font-mono text-lg">&ltHOME&gt</a>
                 <a href="project1.html" class="btn btn-ghost font-mono text-lg">&ltPROJECT1&gt</a>
                 <a class="btn btn-ghost font-mono text-lg">&ltPROJECT2&gt</a>
+                <a href="log.html" class="btn btn-ghost font-mono text-lg">&ltLog&gt</a>
             </div>
             <div class="navbar-end"></div>
         </div>
+    </div>
 
-        <div class="hero pt-8">
-            <div class="hero-content">
-                <!-- ARTIST STATEMENT -->
-                <div>
-                    <div class="prose">
-                        <h1 class="font-mono text-center text-5xl">Inkweaver</h1>
-                        <h2 class="pt-4">Artist Statement</h2>
-                        <p>
-                            <i>Inkweaver</i> is a generative art tool for creating spontaneous line art.
-                            By adjusting the brush properties, you can create anything from methodical,
-                            textured doodles to freeflowing, sporadic lineography. You can find examples <a href="project1.html#gallery">here</a>.
-                        </p>
-                        <h2>How It Works</h2>
-                        <p>
-                            Lines are drawn by particles that leave a trail as they move across the screen.
-                            As the mouse is dragged, more particles are added to the canvas.
-                            Each particle has a position, velocity, and acceleration.
-                            In order to push particles around, the canvas applies a force to the particle.
-                            The angle of this force is determined by the coordinate of the particle mapped to 2D Perlin
-                            noise.
-                        </p>
-                        <a href="assets/js/inkweaver.js">SOURCE CODE</a>
-                        <h2>Final Thoughts</h2>
-                        <p>
-                            I think I was able to achieve a pretty distinctive visual style with <i>Inkweaver</i>, and
-                            I'm very happy with the possibilities that the different line settings offer.
-                            In Art 74, I wrote a drawing program called <i>Lineweaver</i> that explores the beauty of order and symmetry.
-                            In contrast, <i>Inkweaver</i> embraces the unpredictable, organic forms that arise from chaos and chance.
-                        </p>
-                        <p>
-                            I thought about adding colors to the lines and shifting the hue depending on time, position, or noise.
-                            In the end, I chose grayscale to maintain simplicity and draw more attention to form and texture.
-                            That said, I think that color could add a limitless number of exciting aesthetic possibilities with some more time and thought.
-                        </p>
-                        <h2>How to Use</h2>
-                        <p>
-                            Use the mouse to draw on the canvas. Create up to 27 unique brushes by combining
-                            multiple line settings.
-                        </p>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Hotkey</th>
-                                    <th>Function</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>X</td>
-                                    <td>Clear canvas and reset settings</td>
-                                </tr>
-                                <tr>
-                                    <td>1, 2, 3</td>
-                                    <td>Set line speed</td>
-                                </tr>
-                                <tr>
-                                    <td>Q, W, E</td>
-                                    <td>Set line smoothness</td>
-                                </tr>
-                                <tr>
-                                    <td>A, S, D</td>
-                                    <td>Set line opacity</td>
-                                </tr>
-                                <tr>
-                                    <td>Arrow Keys</td>
-                                    <td>Set flow direction</td>
-                                </tr>
-                                <tr>
-                                    <td>Z</td>
-                                    <td>Toggle whether lines wrap around the canvas</td>
-                                </tr>
-                                <tr>
-                                    <td>F</td>
-                                    <td>Toggle line fading</td>
-                                </tr>
-                                <tr>
-                                    <td>C</td>
-                                    <td>Toggle line erasing</td>
-                                </tr>
-                                <tr>
-                                    <td>R</td>
-                                    <td>Reset Settings</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+    <div class="hero px-4 pt-8">
+        <div class="hero-content">
+            <!-- ARTIST STATEMENT -->
+            <div>
+                <div class="prose">
+                    <h1 class="font-mono text-center text-5xl">Inkweaver</h1>
+                    <h2 class="pt-4">Artist Statement</h2>
+                    <p>
+                        <i>Inkweaver</i> is a generative art tool for creating spontaneous line art.
+                        By adjusting the brush properties, you can create anything from methodical,
+                        textured doodles to freeflowing, sporadic lineography. You can find examples <a
+                            href="project1.html#gallery">here</a>.
+                    </p>
+                    <h2>How It Works</h2>
+                    <p>
+                        Lines are drawn by particles that leave a trail as they move across the screen.
+                        As the mouse is dragged, more particles are added to the canvas.
+                        Each particle has a position, velocity, and acceleration.
+                        In order to push particles around, the canvas applies a force to the particle.
+                        The angle of this force is determined by the coordinate of the particle mapped to 2D Perlin
+                        noise.
+                    </p>
+                    <a href="assets/js/inkweaver.js">SOURCE CODE</a>
+                    <h2>Final Thoughts</h2>
+                    <p>
+                        I think I was able to achieve a pretty distinctive visual style with <i>Inkweaver</i>, and
+                        I'm very happy with the possibilities that the different line settings offer.
+                        In Art 74, I wrote a drawing program called <i>Lineweaver</i> that explores the beauty of order
+                        and symmetry.
+                        In contrast, <i>Inkweaver</i> embraces the unpredictable, organic forms that arise from chaos
+                        and chance.
+                    </p>
+                    <p>
+                        I thought about adding colors to the lines and shifting the hue depending on time, position, or
+                        noise.
+                        In the end, I chose grayscale to maintain simplicity and draw more attention to form and
+                        texture.
+                        That said, I think that color could add a limitless number of exciting aesthetic possibilities
+                        with some more time and thought.
+                    </p>
+                    <h2>How to Use</h2>
+                    <p>
+                        Use the mouse to draw on the canvas. Create up to 27 unique brushes by combining
+                        multiple line settings.
+                    </p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Hotkey</th>
+                                <th>Function</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>X</td>
+                                <td>Clear canvas and reset settings</td>
+                            </tr>
+                            <tr>
+                                <td>1, 2, 3</td>
+                                <td>Set line speed</td>
+                            </tr>
+                            <tr>
+                                <td>Q, W, E</td>
+                                <td>Set line smoothness</td>
+                            </tr>
+                            <tr>
+                                <td>A, S, D</td>
+                                <td>Set line opacity</td>
+                            </tr>
+                            <tr>
+                                <td>Arrow Keys</td>
+                                <td>Set flow direction</td>
+                            </tr>
+                            <tr>
+                                <td>Z</td>
+                                <td>Toggle whether lines wrap around the canvas</td>
+                            </tr>
+                            <tr>
+                                <td>F</td>
+                                <td>Toggle line fading</td>
+                            </tr>
+                            <tr>
+                                <td>C</td>
+                                <td>Toggle line erasing</td>
+                            </tr>
+                            <tr>
+                                <td>R</td>
+                                <td>Reset Settings</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
+
     <!-- SKETCH -->
     <div id="canvas" class="m-0 pt-16 overflow-hidden"></div>
 </body>

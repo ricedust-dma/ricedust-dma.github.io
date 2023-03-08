@@ -10,79 +10,97 @@
 </head>
 
 <body>
-    <div class="mx-auto px-4 py-4">
+    <div class="mx-auto px-4 pt-4">
         <!-- NAVBAR -->
         <div class="navbar">
-            <div class="navbar-start"></div>
-            <div class="navbar-center space-x-4">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <label tabindex="0" class="btn btn-ghost sm:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </label>
+                    <ul tabindex="0" class="menu menu-compact dropdown-content bg-base-100 rounded-box w-52 p-2">
+                        <li><a href="./" class="btn btn-ghost font-mono text-base">&ltHOME&gt</a></li>
+                        <li><a class="btn btn-active font-mono text-base">&ltPROJECT1&gt</a></li>
+                        <li><a class="btn btn-ghost font-mono text-base">&ltPROJECT2&gt</a></li>
+                        <li><a href="log.html" class="btn btn-ghost font-mono text-base">&ltLog&gt</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="./" class="btn btn-ghost font-extrabold text-xl sm:hidden">RICEDUST</a>
+            <div class="navbar-center hidden sm:flex gap-4">
                 <a href="./" class="btn btn-ghost font-mono text-lg">&ltHOME&gt</a>
                 <a class="btn btn-active font-mono text-lg">&ltPROJECT1&gt</a>
                 <a class="btn btn-ghost font-mono text-lg">&ltPROJECT2&gt</a>
+                <a href="log.html" class="btn btn-ghost font-mono text-lg">&ltLog&gt</a>
             </div>
             <div class="navbar-end"></div>
         </div>
+    </div>
 
-        <!-- HEADER -->
-        <div class="hero pt-8">
-            <div class="hero-content">
-                <div class="text-center">
-                    <h1 class="font-mono text-5xl">&ltPROJECT1&gt</h1>
-                    <div class="prose prose-lg pt-4">
-                        <blockquote>
-                            <p>
-                                The best way to get the right answer on the internet is not to ask a question; it's to
-                                post the wrong answer.
-                            </p>
-                        </blockquote>
-                        <p>—Ward Cunningham, inventor of the Wiki</p>
-                    </div>
+    <!-- HEADER -->
+    <div class="hero px-4 pt-16">
+        <div class="hero-content">
+            <div class="text-center">
+                <h1 class="font-mono text-5xl">&ltPROJECT1&gt</h1>
+                <div class="prose sm:prose-lg pt-4">
+                    <blockquote>
+                        <p>
+                            The best way to get the right answer on the internet is not to ask a question; it's to
+                            post the wrong answer.
+                        </p>
+                    </blockquote>
+                    <p>—Ward Cunningham, inventor of the Wiki</p>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="hero pt-8">
-            <div class="hero-content flex-col xl:flex-row gap-8 items-stretch">
+    <div class="hero p-8">
+        <div class="hero-content grid lg:grid-cols-3 gap-8 items-stretch">
 
-                <!-- EXERCISE 1 -->
-                <div class="card w-96 bg-base-200 shadow-xl">
-                    <figure><img src="assets/img/ex1-thumbnail.png" alt="Cube Entity"></figure>
-                    <div class="card-body">
-                        <h2 class="card-title text-2xl font-mono">Exercise 1</h2>
-                        <p class="prose">
-                            Touch the cubes. Unless you're photosensitive. Then by all
-                            means avoid.
-                        </p>
-                        <div class="card-actions justify-center">
-                            <a href="exercise1.html" class="btn btn-secondary btn-outline w-full mt-4">GO</a>
-                        </div>
+            <!-- EXERCISE 1 -->
+            <div class="card bg-base-200 shadow-xl">
+                <figure><img src="assets/img/ex1-thumbnail.png" alt="Cube Entity"></figure>
+                <div class="card-body">
+                    <h2 class="card-title text-2xl font-mono">Exercise 1</h2>
+                    <p class="prose">
+                        Touch the cubes. Unless you're photosensitive. Then by all
+                        means avoid.
+                    </p>
+                    <div class="card-actions justify-center">
+                        <a href="exercise1.html" class="btn btn-secondary btn-outline w-full mt-4">GO</a>
                     </div>
                 </div>
+            </div>
 
-                <!-- EXERCISE 2 -->
-                <div class="card w-96 bg-base-200 shadow-xl">
-                    <figure><img src="assets/img/ex2-thumbnail.png" alt="Windows XP"></figure>
-                    <div class="card-body">
-                        <h2 class="card-title text-2xl font-mono">Exercise 2</h2>
-                        <p class="prose">
-                            I brought back everyone's favorite virtual assistant.
-                        </p>
-                        <div class="card-actions justify-center">
-                            <a href="exercise2.html" class="btn btn-secondary btn-outline w-full mt-4">GO</a>
-                        </div>
+            <!-- EXERCISE 2 -->
+            <div class="card bg-base-200 shadow-xl">
+                <figure><img src="assets/img/ex2-thumbnail.png" alt="Windows XP"></figure>
+                <div class="card-body">
+                    <h2 class="card-title text-2xl font-mono">Exercise 2</h2>
+                    <p class="prose">
+                        I brought back everyone's favorite virtual assistant.
+                    </p>
+                    <div class="card-actions justify-center">
+                        <a href="exercise2.html" class="btn btn-secondary btn-outline w-full mt-4">GO</a>
                     </div>
                 </div>
+            </div>
 
-                <!-- PROJECT 1 -->
-                <div class="card w-96 bg-base-200 shadow-xl">
-                    <figure><img src="assets/img/proj1-thumbnail.png" alt="Inked Mountains"></figure>
-                    <div class="card-body">
-                        <h2 class="card-title text-2xl font-mono">Inkweaver</h2>
-                        <p class="prose">
-                            The ink is alive...
-                        </p>
-                        <div class="card-actions justify-center">
-                            <a href="inkweaver.html" class="btn btn-secondary btn-outline w-full mt-4">GO</a>
-                        </div>
+            <!-- PROJECT 1 -->
+            <div class="card bg-base-200 shadow-xl">
+                <figure><img src="assets/img/proj1-thumbnail.png" alt="Inked Mountains"></figure>
+                <div class="card-body">
+                    <h2 class="card-title text-2xl font-mono">Inkweaver</h2>
+                    <p class="prose">
+                        The ink is alive...
+                    </p>
+                    <div class="card-actions justify-center">
+                        <a href="inkweaver.html" class="btn btn-secondary btn-outline w-full mt-4">GO</a>
                     </div>
                 </div>
             </div>
@@ -103,11 +121,11 @@
                     <a href="assets/img/proj1-4.png"><img src="assets/img/proj1-4.png" alt="Jellyfish of Scarves"></a>
                     <a href="assets/img/proj1-12.png"><img src="assets/img/proj1-12.png" alt="Knit Feather"></a>
                     <a href="assets/img/proj1-5.png"><img src="assets/img/proj1-5.png" alt="Nomad"></a>
-                    
+
                     <a href="assets/img/proj1-11.png"><img src="assets/img/proj1-11.png" alt="Oscillation II"></a>
                     <a href="assets/img/proj1-7.png"><img src="assets/img/proj1-7.png" alt="Hair Examination"></a>
                     <a href="assets/img/proj1-8.png"><img src="assets/img/proj1-8.png" alt="Shaky Hands"></a>
-                    
+
                     <a href="assets/img/proj1-10.png"><img src="assets/img/proj1-10.png" alt="Flowing Hair"></a>
                     <a href="assets/img/proj1-6.png"><img src="assets/img/proj1-6.png" alt="Tangled Hair"></a>
                     <a href="assets/img/proj1-13.png"><img src="assets/img/proj1-13.png" alt="Hair Constellation"></a>

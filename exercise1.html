@@ -16,57 +16,75 @@
 </head>
 
 <body>
-    <div class="mx-auto px-4 py-4">
-
+    <div class="mx-auto px-4 pt-4">
         <!-- NAVBAR -->
         <div class="navbar">
-            <div class="navbar-start"></div>
-            <div class="navbar-center space-x-4">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <label tabindex="0" class="btn btn-ghost sm:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </label>
+                    <ul tabindex="0" class="menu menu-compact dropdown-content bg-base-200 rounded-box w-52 p-2">
+                        <li><a href="./" class="btn btn-ghost font-mono text-base">&ltHOME&gt</a></li>
+                        <li><a href="project1.html" class="btn btn-ghost font-mono text-base">&ltPROJECT1&gt</a></li>
+                        <li><a class="btn btn-ghost font-mono text-base">&ltPROJECT2&gt</a></li>
+                        <li><a href="log.html" class="btn btn-ghost font-mono text-base">&ltLog&gt</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="./" class="btn btn-ghost font-extrabold text-xl sm:hidden">RICEDUST</a>
+            <div class="navbar-center hidden sm:flex gap-4">
                 <a href="./" class="btn btn-ghost font-mono text-lg">&ltHOME&gt</a>
                 <a href="project1.html" class="btn btn-ghost font-mono text-lg">&ltPROJECT1&gt</a>
                 <a class="btn btn-ghost font-mono text-lg">&ltPROJECT2&gt</a>
+                <a href="log.html" class="btn btn-ghost font-mono text-lg">&ltLog&gt</a>
             </div>
             <div class="navbar-end"></div>
         </div>
+    </div>
 
-        <div class="hero pt-8">
-            <div class="hero-content">
-                <!-- ARTIST STATEMENT -->
-                <div>
-                    <div class="prose">
-                        <h1 class="font-mono text-center text-5xl">Exercise 1</h1>
-                        <h2 class="pt-4">Artist Statement</h2>
-                        <p>
-                            I tried using p5.js to do a 3D simulation.
-                            Recently, I've been interested in Perlin noise and I was pleasantly surprised that the p5.js
-                            API has a noise() function.
-                            I used it to make a bundle of cubes that responds to the mouse.
-                            You can hover over the cubes to unleash an EDM concert right in your browser.
-                        </p>
-                        <h2>How It Works</h2>
-                        <p>
-                            Using p5's WebGL canvas, I draw five cubes to the screen using a for loop.
-                            I rotate the cubes along the x and y axis each frame.
-                            I introduce noise to the rotation and size of each cube to add a bit of chaos.
-                            The intensity of the noise increases as the mouse moves further away from the center of the
-                            screen and decreases as the mouse moves closer.
-                            This basically has the effect of destabilizing the cubes as you move the mouse away.
-                        </p>
-                        <p>
-                            Hovering over the cubes opens up a hallway of shapes.
-                            The size of the shapes increases exponentially to create the illusion of zooming through
-                            a hallway.
-                            To draw each shape in even intervals, I divide the frame rate by the number of shapes and
-                            iterate over this interval.
-                            To further multiply the shapes, I nest a for loop to clone each shape.
-                            I use the random() function to achieve the glitchy flickering effect.
-                        </p>
-                        <a href="assets/js/exercise1.js">SOURCE CODE</a>
-                    </div>
+    <div class="hero px-4 pt-8">
+        <div class="hero-content">
+            <!-- ARTIST STATEMENT -->
+            <div>
+                <div class="prose">
+                    <h1 class="font-mono text-center text-5xl">Exercise 1</h1>
+                    <h2 class="pt-4">Artist Statement</h2>
+                    <p>
+                        I tried using p5.js to do a 3D simulation.
+                        Recently, I've been interested in Perlin noise and I was pleasantly surprised that the p5.js
+                        API has a noise() function.
+                        I used it to make a bundle of cubes that responds to the mouse.
+                        You can hover over the cubes to unleash an EDM concert right in your browser.
+                    </p>
+                    <h2>How It Works</h2>
+                    <p>
+                        Using p5's WebGL canvas, I draw five cubes to the screen using a for loop.
+                        I rotate the cubes along the x and y axis each frame.
+                        I introduce noise to the rotation and size of each cube to add a bit of chaos.
+                        The intensity of the noise increases as the mouse moves further away from the center of the
+                        screen and decreases as the mouse moves closer.
+                        This basically has the effect of destabilizing the cubes as you move the mouse away.
+                    </p>
+                    <p>
+                        Hovering over the cubes opens up a hallway of shapes.
+                        The size of the shapes increases exponentially to create the illusion of zooming through
+                        a hallway.
+                        To draw each shape in even intervals, I divide the frame rate by the number of shapes and
+                        iterate over this interval.
+                        To further multiply the shapes, I nest a for loop to clone each shape.
+                        I use the random() function to achieve the glitchy flickering effect.
+                    </p>
+                    <a href="assets/js/exercise1.js">SOURCE CODE</a>
                 </div>
             </div>
         </div>
     </div>
+    
     <!-- SKETCH -->
     <div id="canvas" class="m-0 pt-16 overflow-hidden"></div>
 </body>
